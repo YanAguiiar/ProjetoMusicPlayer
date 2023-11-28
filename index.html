@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <title>Projeto MusicPlayer</title>
+</head>
+
+<body>
+
+  <div class="playerCompleto">
+
+    <img src="/img/See you again.jpg" alt="See You Again">
+
+    <div class="descricao">
+      <h2>Nome da Música</h2>
+      <i>Nome do Artista</i>
+    </div>
+
+    <div class="duracao">
+
+      <div class="barra">
+        <progress value="0" max="1"></progress>
+        <div class="ponto"></div>
+      </div>
+
+      <div class="tempo">
+        <p class="inicio">0:00</p>
+        <p class="fim">0:00</p>
+      </div>
+
+    </div>
+
+    <div class="player">
+      <ion-icon class="setas anterior" name="play-skip-back-outline"></ion-icon>
+      <ion-icon class="botao-play" name="play-outline"></ion-icon>
+      <ion-icon class="botao-pause" name="pause-outline"></ion-icon>
+      <ion-icon class="setas proxima" name="play-skip-forward-outline"></ion-icon>
+    </div>
+
+  </div>
+
+  <audio src="/music/See-You-Again.mp3"></audio>
+
+</body>
+<script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>
