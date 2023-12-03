@@ -88,10 +88,22 @@ function segundosParaMinutos(segundos) {
 
 function renderizarMusica(index) {
   musica.setAttribute("src", musicas[index].src);
+  nomeMusica.textContent = musicas[index].titulo;
+  nomeArtista.textContent = musicas[index].artista;
+  imagem.src = musicas[index].img;
+
   musica.addEventListener("loadeddata", () => {
-    nomeMusica.textContent = musicas[index].titulo;
-    nomeArtista.textContent = musicas[index].artista;
-    imagem.src = musicas[index].img;
     tempoTotal.textContent = segundosParaMinutos(Math.floor(musica.duration));
   });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const audio = document.querySelector("audio");
+  const volumeSlider = document.querySelector(".volume-slider");
+
+  // Adiciona um listener para o evento de mudança no controle deslizante de volume
+  volumeSlider.addEventListener("input", function () {
+    const volume = volumeSlider.value / 100; // Converte o valor para a faixa de 0 a 1
+    audio.volume = volume; // Define o volume do áudio
+  });
+});
